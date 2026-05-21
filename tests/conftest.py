@@ -6,10 +6,8 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-# 🚨 ВАЖНО: Установите DATABASE_URL ДО импорта app.database!
 os.environ["DATABASE_URL"] = "sqlite:///./test.db"
 
-# Теперь можно импортировать после установки env var
 from app.database import Base, get_db
 
 # Добавляем корень проекта в PYTHONPATH
